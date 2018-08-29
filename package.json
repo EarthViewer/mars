@@ -1,0 +1,33 @@
+{
+  "name": "Mars",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://earthviewer.github.io/mars",
+  "dependencies": {
+    "ajv": "^6.5.3",
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "mobx": "^4.3.2",
+    "mobx-react": "^5.2.5",
+    "popper.js": "^1.14.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-fontawesome": "^1.6.1",
+    "react-scripts": "^1.1.5",
+    "reactstrap": "^6.4.0",
+    "worldwind-react-globe": "^1.1.0",
+    "worldwind-react-globe-bs4": "^1.0.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
