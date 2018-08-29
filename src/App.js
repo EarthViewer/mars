@@ -17,6 +17,8 @@ import {
   SettingsCard, 
   Tools } from 'worldwind-react-globe-bs4'
 
+import MarsOneImageLayer from './api/MarsOneImageLayer';
+
 import './App.css'
 
 export default class App extends Component {
@@ -45,21 +47,16 @@ export default class App extends Component {
     
     const globe = this.globeRef.current
     
+    // USGS Astrogeology WMS https://astrowebmaps.wr.usgs.gov/webmapatlas/Layers/maps.html
+    
     const layers = [
-      {layer: 'blue-marble', options: {category: 'base', enabled: true}},
-      {layer: 'blue-marble-landsat', options: {category: 'base', enabled: false}},
-      {layer: 'bing-aerial', options: {category: 'base', enabled: false}},
-      {layer: 'bing-aerial-labels', options: {category: 'base', enabled: false}},
-      {layer: 'eox-sentinal2', options: {category: 'base', enabled: false}},
-      {layer: 'eox-sentinal2-labels', options: {category: 'base', enabled: true}},
-      {layer: 'eox-openstreetmap', options: {category: 'overlay', enabled: false, opacity: 0.8}},
-      {layer: 'bing-roads', options: {category: 'overlay', enabled: false, opacity: 0.8}},
+      {layer: new MarsOneImageLayer(), options: {category: 'base', enabled: true}},
       {layer: 'renderables', options: {category: 'data', enabled: true, displayName: 'Markers'}},
       {layer: 'compass', options: {category: 'setting', enabled: false}},
       {layer: 'coordinates', options: {category: 'setting', enabled: true}},
       {layer: 'view-controls', options: {category: 'setting', enabled: true}},
-      {layer: 'stars', options: {category: 'setting', enabled: false}},
-      {layer: 'atmosphere-day-night', options: {category: 'setting', enabled: false}}
+      {layer: 'stars', options: {category: 'setting', enabled: true}},
+//      {layer: 'atmosphere-day-night', options: {category: 'setting', enabled: false}}
     ]
     
     const navbarItems = [
@@ -73,11 +70,11 @@ export default class App extends Component {
     return (
       <div>
         <NavBar 
-            logo='mars.png'
+            logo='images/mars-icon.png'
             title='Mars'
             href='https://github.com/EarthViewer/mars'
             items={navbarItems}
-            search={navbarSearch} />
+            />
         <Container fluid className='p-0'>
           <div className='globe'>
               <Globe 
