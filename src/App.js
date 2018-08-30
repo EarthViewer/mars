@@ -17,7 +17,7 @@ import {
   SettingsCard, 
   Tools } from 'worldwind-react-globe-bs4'
 
-import MarsOneImageLayer from './api/MarsOneImageLayer';
+import MarsBackgroundLayer from './api/MarsBackgroundLayer';
 
 import './App.css'
 
@@ -50,7 +50,7 @@ export default class App extends Component {
     // USGS Astrogeology WMS https://astrowebmaps.wr.usgs.gov/webmapatlas/Layers/maps.html
     
     const layers = [
-      {layer: new MarsOneImageLayer(), options: {category: 'base', enabled: true}},
+      {layer: new MarsBackgroundLayer(), options: {category: 'background', enabled: true}},
       {layer: 'renderables', options: {category: 'data', enabled: true, displayName: 'Markers'}},
       {layer: 'compass', options: {category: 'setting', enabled: false}},
       {layer: 'coordinates', options: {category: 'setting', enabled: true}},
@@ -78,6 +78,7 @@ export default class App extends Component {
         <Container fluid className='p-0'>
           <div className='globe'>
               <Globe 
+                backgroundColor='black'
                 ref={this.globeRef} 
                 layers={layers}/>
           </div>
