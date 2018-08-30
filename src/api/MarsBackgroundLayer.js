@@ -20,6 +20,6 @@ export default class MarsOneImageLayer extends WorldWind.RenderableLayer {
 
     this.pickEnabled = false;
 
-    this.minActiveAltitude = 3e6;
+    this.minActiveAltitude = 0;
   }
 }
