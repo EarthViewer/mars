@@ -1,13 +1,14 @@
 # ![alt text](https://viewer.earth/mars/images/mars-icon.png "Mars logo") [Mars Explorer](https://viewer.earth/mars/) 
 
-__Mars Explorer__ is planetary viewer for martian places, imagery and terrain, featuring imagery from the [USGS Astrogeology](https://astrowebmaps.wr.usgs.gov/webmapatlas/Layers/maps.htm)
-
-The __Explorer__ was cloned from the [worldwind-react-app](https://github.com/emxsys/worldwind-react-app) project.
-
-Below you will find some information on how to perform common tasks.
+The __Mars Explorer__ is planetary viewer for martian places, imagery and terrain, featuring imagery from the [USGS Astrogeology](https://astrowebmaps.wr.usgs.gov/webmapatlas/Layers/maps.htm)
 
 ---
 # Building
+
+This project was cloned from the [worldwind-react-app](https://github.com/emxsys/worldwind-react-app) project.
+
+Below you will find some information on how to perform common tasks.
+
 ## Setup
 
 After cloning this project, edit the following files to customize the branding of your app:
