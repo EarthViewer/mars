@@ -33,8 +33,9 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      lat: 34.2,
-      lon: -119.2,
+      // Initial lat/log at Elisium Planitia - Insight landing site
+      lat: 2.983,
+      lon: 154.74,
       alt: 10e6,
       globe: null
     }
@@ -62,7 +63,6 @@ export default class App extends Component {
     wwd.globe.polarRadius = wwd.globe.equatorialRadius * (1 - flattening);
     //This globe's eccentricity squared.
     wwd.globe.eccentricitySquared = (2 * flattening) - (flattening * flattening);      
-    
   }
   
   render() {
@@ -106,7 +106,11 @@ export default class App extends Component {
               <Globe 
                 backgroundColor='black'
                 ref={this.globeRef} 
-                layers={layers}/>
+                layers={layers}
+                latitude={this.state.lat}
+                longitude={this.state.lon}
+                altitude={this.state.alt} 
+                />
           </div>
           <div className='overlayTools noninteractive'>
               <Tools 
