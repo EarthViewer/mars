@@ -4,6 +4,7 @@
  * http://www.opensource.org/licenses/mit-license
  */
 import React, { Component } from 'react'
+import 'worldwindjs'; // WorldWind
 import Globe from 'worldwind-react-globe'
 import { 
   CardColumns, 
@@ -23,6 +24,8 @@ import MarsMdim21Layer from './api/MarsMdim21Layer';
 import MarsMolaColorLayer from './api/MarsMolaColorLayer';
 
 import './App.css'
+
+/* global WorldWind */
 
 export default class App extends Component {
     
@@ -44,6 +47,21 @@ export default class App extends Component {
   componentDidMount() {
     // Get the component with the WorldWindow after mounting
     this.setState({globe: this.globeRef.current})
+    
+    const globe = this.globeRef.current;
+    var wwd = globe.wwd;
+    
+    //
+    wwd.globe = new WorldWind.Globe(new WorldWind.ElevationModel());
+    
+    // This globe's equatorial radius in meters.
+    wwd.globe.equatorialRadius = 3396200;
+    var flattening = 0.00589;
+    // This globe's polar radius in meters.
+    wwd.globe.polarRadius = wwd.globe.equatorialRadius * (1 - flattening);
+    //This globe's eccentricity squared.
+    wwd.globe.eccentricitySquared = (2 * flattening) - (flattening * flattening);      
+    
   }
   
   render() {
