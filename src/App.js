@@ -22,6 +22,7 @@ import MarsBackgroundLayer from './api/MarsBackgroundLayer';
 import MarsSimpleCylindricalRasters from './api/MarsSimpleCylindricalRasters';
 import MarsMdim21Layer from './api/MarsMdim21Layer';
 import MarsMolaColorLayer from './api/MarsMolaColorLayer';
+import MarsFeatureNamesLayer from './api/MarsFeatureNamesLayer';
 
 import './App.css'
 
@@ -75,6 +76,7 @@ export default class App extends Component {
       {layer: new MarsSimpleCylindricalRasters(), options: {category: 'base', enabled: false}},
       {layer: new MarsMolaColorLayer(), options: {category: 'base', enabled: false}},
       {layer: new MarsMdim21Layer(), options: {category: 'base', enabled: false}},
+      {layer: new MarsFeatureNamesLayer(), options: {category: 'overlay', enabled: false}},
       {layer: 'renderables', options: {category: 'data', enabled: true, displayName: 'Markers'}},
       {layer: 'compass', options: {category: 'setting', enabled: false}},
       {layer: 'coordinates', options: {category: 'setting', enabled: true}},
