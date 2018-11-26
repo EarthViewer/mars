@@ -1,6 +1,6 @@
 # ![alt text](https://viewer.earth/mars/images/mars-icon.png "Mars logo") [Mars Explorer](https://viewer.earth/mars/) 
 
-The __Mars Explorer__ is planetary viewer for martian places, imagery and terrain, featuring imagery from the [USGS Astrogeology](https://astrowebmaps.wr.usgs.gov/webmapatlas/Layers/maps.htm)
+The __Mars Explorer__ is planetary viewer for martian places, imagery and terrain, featuring imagery from the [USGS Astrogeology](https://astrowebmaps.wr.usgs.gov/webmapatlas/Layers/maps.html)
 
 ---
 # Building
